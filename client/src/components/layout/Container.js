@@ -5,6 +5,7 @@ const StyledDivWrapper = styled.div`
   height: 100vh;
   width: 100vw;
   background-color: #0038F5;
+
 `;
 
 const StyledDiv = styled.div`
@@ -22,7 +23,8 @@ const StyledDiv = styled.div`
   background-color: white;
   box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.13);
 
-  z-index: 1;
+  z-index: 10;
+
 `;
 
 const StyledDivContent = styled.div`

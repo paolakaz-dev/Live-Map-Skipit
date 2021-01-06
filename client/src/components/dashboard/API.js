@@ -5,6 +5,16 @@ export async function listLogEntries(){
     return response.json(); 
 }
 
+export async function listCategories(){
+    const response = await fetch(`${API_URL}/api/cat`);
+    return response.json(); 
+}
+
+export async function listNumbers(){
+    const response = await fetch(`${API_URL}/api/attend/getNumber`);
+    return response.json(); 
+}
+
 export async function createLogEntry(entry){
     const response = await fetch(`${API_URL}/api/logs`, {
         method: 'POST',

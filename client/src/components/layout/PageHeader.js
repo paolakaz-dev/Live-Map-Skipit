@@ -6,6 +6,7 @@ const StyledHeader = styled.h3`
   font-weight: 600;
   text-align: left;
   color: black;
+  z-index:9;
 
   margin-left: 1rem;
   margin-bottom: 20px;

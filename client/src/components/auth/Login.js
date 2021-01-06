@@ -24,13 +24,13 @@ class Login extends Component {
   componentDidMount() {
     // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push("/map");
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push("/map");
     }
 
     if (nextProps.errors) {
@@ -53,7 +53,30 @@ class Login extends Component {
     };
 
     this.props.loginUser(userData);
+
+    // if (this.isFormValid(this.state)) {
+    //   this.setState({ errors: [] });
+    //   this.props.dispatch(loginUser(userData)).then((response) => {
+    //     if (response.payload.loginSuccess) {
+    //       window.localStorage.setItem("userId", response.payload.userId);
+    //       this.props.history.push("/");
+    //     } else {
+    //       this.setState({
+    //         errors: this.state.errors.concat(
+    //           "Failed to log in, you can check your Email and Password"
+    //         ),
+    //       });
+    //     }
+    //   });
+    // } else {
+    //   this.setState({
+    //     errors: this.state.errors.concat("Form is not valid"),
+    //   });
+    // }
   };
+
+  // isFormValid = ({ email, password }) => email && password;
+
 
   render() {
     const { errors } = this.state;

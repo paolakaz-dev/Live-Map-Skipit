@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   position: absolute;
   top: -70px;
   left: 0;
+  z-index:10;
 `;
 
 const StyledPageTitle = styled.h4`

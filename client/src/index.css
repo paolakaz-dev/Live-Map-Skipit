@@ -1,9 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
@@ -16,42 +14,108 @@ code {
     monospace;
 }
 
-.geo {
+.geo{
+  position: absolute;
   width: 30px;
-  margin-top: 195vw;
-  margin-left: 80vw;
+  margin-top: 150vw;
+  margin-left: 87vw;
+  z-index: 20;
  
 }
-.marker {
-  transform: translate(-50%, -100%) ;
 
+.navi {
+  width: 30px;
+  position: absolute;
+  z-index: 20;
+
+  margin-top: 160vw;
+  margin-left: -50px;
+}
+.marker {
+  transform: translate(-50%, -100%);
+  z-index: 5;
 }
 
+.profilel ul {
+  margin-top: -190px;
+}
+div.overlays {
+  margin-top: 73px;
+  margin-left: -30px;
+}
 .popup {
-  max-width: 40vw;
+  max-width: 50vw;
   padding: 1rem;
+  z-index: 50;
+
 }
 .popup img {
   width: 100%;
 }
+
 .entry-form label, .entry-form label input, .entry-form label textarea, .entry-form label button {
   font-size: 1rem;
   margin: 0.5rem 0;
   display: block;
   width: 100%;
+  color: black;
+
 }
-.gl-map {
+
+.entry-form input {
+  padding-left: 0;
+  padding-top: 0;
+  box-shadow: 0 0 5px #999;
+  border-radius: 40px;
+  width: 11rem;
+}
+.profile-button {
+  width: 100%;
+  height: 40px;
+  background-color: #FEA7B7;
+  box-shadow: 0 0 5px #999;
+  border-radius: 40px;
+  width: 3rem;
+  color: white;
+  font-size: 20px;
+  border: 0px;
+  margin-left: 50px;
+}
+.popup-button, .likes  {
+  width: 100%;
+  height: 45px;
+  background-color: #FEA7B7;
+  box-shadow: 0 0 5px #999;
+  border-radius: 40px;
+  width: 11rem;
+  color: white;
+  font-size: 20px;
+  border: 0px;
+}
+.entry-form button {
+  width: 100%;
+  height: 45px;
+  margin-top: 6px;
+  background-color: #FEA7B7;
+  box-shadow: 0 0 5px #999;
+  border-radius: 40px;
+  color: white;
+  font-size: 20px;
+  border: 0px;
+
+}
+.gl-map, .profile{
 
   width: 100vw;
   height: 100vw;
   margin-top: 9vw;
   margin-right: -50px;
   border-radius: 40px;
+  z-index: 0;
 
-  
 }
 
-div.gl-map.mapboxgl-map {
+div.gl-map.mapboxgl-map{
   margin: -10vw 0 0 -8vw;
   height: 91%;
   width: 100%;
@@ -70,7 +134,7 @@ div.gl-map.mapboxgl-map {
   font-size: 18px;
 }
 
-div.landing, .live-map  {
+div.landing, .live-map{
   width: 100%;
   height: 50px;
 
@@ -88,5 +152,69 @@ div.landing, .live-map  {
   outline: none;
   margin-bottom: 15px;
 }
+div.mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
+ position: absolute;
+ margin-top: -89vh;
+ margin-left: -10px;
+ width: 90vw;
+ border-radius: 40px;
+ background-color: white;
+ display: flex;
+ align-items: center;
+}
+input.mapboxgl-ctrl-geocoder--input {
+  color: black;
+  border-bottom: none;
+  text-emphasis: none;
 
 
+}
+input.mapboxgl-ctrl-geocoder--input:focus {
+  margin-left: 15px;
+  width: 80%;
+  border: none;
+  outline: none;
+  outline: none !important;
+  appearance: none;
+}
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+  outline: none;
+  border-bottom: none;
+  border-radius: none;
+  padding-left: 2.5rem;
+  padding-top: 0.2rem;
+
+}
+
+form input#email, input#password, input#name, input#password2 {
+  padding-left: 0;
+  padding-top: 0;
+  box-shadow: 0 0 5px #999;
+  border-radius: 40px;
+
+}
+
+input:focus {
+  border:1px solid blue;
+  box-shadow: 0 0 10px #719ECE;
+  z-index: 1;
+}
+.filter {
+  background-color: white;
+  position: absolute;
+  margin-top: 30rem;
+}
+td, th{
+ 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+}
+.table {
+  width: 92%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-left: -20px;
+ }

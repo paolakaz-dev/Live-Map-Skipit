@@ -8,8 +8,12 @@ const cors = require('cors');
 
 const users = require("./routes/api/users");
 const logs = require("./routes/api/logs");
+const categories = require("./routes/api/categories");
+const attends = require("./routes/api/favorite");
 
 const app = express();
+
+
 
 
 // Bodyparser middleware
@@ -21,9 +25,7 @@ app.use(
 app.use(bodyParser.json());
 app.use(morgan('common'));
 app.use(helmet());
-app.use(cors({
-  origin: 'http://localhost:3000'
-})); 
+app.use(cors()); 
 // only from localhost:3000 reach our backend
 
 // DB Config
@@ -47,6 +49,8 @@ require("./config/passport")(passport);
 // Routes
 app.use("/api/logs", logs);
 app.use("/api/users", users);
+app.use("/api/cat", categories);
+app.use("/api/favorite", attends);
 
 
 // errors middleware - NotFound and ErrorHandler
